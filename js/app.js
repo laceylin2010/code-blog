@@ -10,10 +10,10 @@ function Info (info){
 Info.prototype.toHTML = function () {
   var $newInfo = $('article.portProjects').clone();
 
-  $newInfo.data('title', this.title);
-  $newInfo.data('url', this.url);
-  $newInfo.data('author', this.author);
-  $newInfo.data('date', this.datePublished);
+  $newInfo.find('h1').text(this.title);
+  $newInfo.find('url', this.url);
+  $newInfo.find('author', this.author);
+  $newInfo.find('date', this.datePublished);
   $newInfo.find('time[pubdate]').attr('title', this.datePublished);
   $newInfo.find('time').html('about ' + parseInt((new Date() - new Date (this.datePublished))/60/60/24/1000) + 'days ago');
 
@@ -29,6 +29,7 @@ rawData.sort(function(a,b){
 });
 
 
+var jobData = [];
 
 function JobsWorked(jobs){
   this.company = jobs.company;
@@ -42,7 +43,7 @@ function JobsWorked(jobs){
 JobsWorked.prototype.toHTML = function () {
   var $newJob = ('article','portJobs').clone();
 
-  $newJob.data('company', this.company);
+  $newJob.find('portJobs h1').text(this.company);
   $newJob.data('jobTitle', this.jobTitle);
   $newJob.data('dateStarted', this.dateStarted);
   $newJob.data('dateEnded', this.dateEnded);
@@ -56,4 +57,12 @@ JobsWorked.prototype.toHTML = function () {
 
 jobData.sort(function(a,b){
   return(new Date(b.jobPublished)) - (new Date(a.jobPublished));
+});
+
+jobData.forEach(function(ele){
+  jobData.push(new JobsWorked(ele));
+});
+
+jobData.forEach(function(a){
+  $('#portfolio').apprend(a.toHTML());
 });
