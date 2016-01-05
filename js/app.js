@@ -36,7 +36,7 @@ function JobsWorked(jobs){
   this.dateStarted = jobs.dateStarted;
   this.dateEnded = jobs.dateEnded;
   this.jobDescript = jobs.jobDescript;
-  this.jobPublished = jobPublished;
+  this.jobPublished = jobs.jobPublished;
 }
 
 JobsWorked.prototype.toHTML = function () {
@@ -48,7 +48,6 @@ JobsWorked.prototype.toHTML = function () {
   $newJob.data('dateEnded', this.dateEnded);
   $newJob.data('jobDescript', this.jobDescript);
   $newJob.data('jobPublished', this.jobPublished);
-  $x
   $newJob.append('<hr>');
 
   $newJob.removeClass('portJobs');
@@ -56,5 +55,5 @@ JobsWorked.prototype.toHTML = function () {
 };
 
 jobData.sort(function(a,b){
-  return(new Date(b.)
+  return(new Date(b.jobPublished)) - (new Date(a.jobPublished));
 });
