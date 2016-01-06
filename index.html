@@ -7,7 +7,15 @@
 
   </head>
   <body>
+    <header class = 'navbar'>
     <h1>Lacey Vu</h1>
+    <nav class = 'navbar' >
+      <ul>
+        <li><a href = 'index.html'>Home</a></li>
+        <li><a href = 'aboutme.Html'>About Me</a></li>
+      </ul>
+    </nav>
+    </header>
       <img src = 'imgs/lacey.jpg' class = 'photoMe'>
         <ul>
           <a href='https://www.facebook.com/lacelin2010'><img src = 'imgs/facebook.png'></a>
@@ -16,23 +24,26 @@
           <a href = 'https://github.com/laceylin2010'><img src = 'imgs/github.jpg'></a>
         </ul>
           <section id = 'portfolio'>
-            <article class = 'portProjects' data-category = 'projects'></article>
+            <article class = 'template' data-category = 'projects'></article>
               <header>
+                <div class = 'persProj'>
                 <h1>Title</h1>
-                  <div class = 'persProj'>
                     By <address><a href= ''>Author Name </a></address>
                     Published <time datePublished= '2000-01-01'>Published Time </time>
                     </div>
               </header>
+
+
               <header>
-                <article class = 'portJobs' data-category = 'previousjobs'></article>
+                <section id = 'jobs'>
+                  <div class = 'randomjobs'>
+                    <article class = 'template2' data-category = 'previousjobs'></article>
                   <h1>Job Title</h1>
-                    <div class = 'randomjobs'>
                       By <address><a href = ''>Author Name</a></address>
                       Published <time jobPublished = '2000-01-01'>Published Time </time>
                     </div>
             </header>
-          </section>
+            </section>
 
 <script src = 'js/jquery.js'></script>
 <script src = 'js/jobs.js'></script>
