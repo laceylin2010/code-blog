@@ -32,37 +32,33 @@
 var careers = [];
 
 function Jobs(jobhistory){
-  this.company = jobhistory.company;
   this.jobTitle = jobhistory.jobTitle;
-  this.dateStarted = jobhistory.dateStarted;
-  this.dateEnded = jobhistory.dateEnded;
+  this.company = jobhistory.company;
+  this.datesWorked = jobhistory.datesWorked;
   this.jobDescript = jobhistory.jobDescript;
-  this.jobPublished = jobhistory.jobPublished;
 }
 
 Jobs.prototype.toHTML = function () {
   var $newJob = $('article.template2').clone();
 
-  $newJob.data('jobTitle', this.jobTitle);
-  $newJob.find('h1').text(this.company);
+  $newJob.find('h2').text(this.jobTitle);
+  console.log(this.jobTitle);
+  $newJob.find('').text(this.company);
   $newJob.data('dateStarted', this.dateStarted);
   $newJob.data('dateEnded', this.dateEnded);
   $newJob.data('jobDescript', this.jobDescript);
-  $newJob.data('jobPublished', this.jobPublished);
   $newJob.append('<hr>');
 
   $newJob.removeClass('template2');
   return $newJob;
 };
 
-jobData.sort(function(a,b){
-  return(new Date(b.jobPublished)) - (new Date(a.jobPublished));
-});
-
 jobData.forEach(function(ele){
   careers.push(new Jobs(ele));
 });
 
 careers.forEach(function(a){
-  $('#jobs').append(a.toHTML());
+  console.log(a.toHTML());
+  $('#employment').append(a.toHTML());
+    //  $('#employment').text(a.toHTML());
 });
