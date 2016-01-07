@@ -4,6 +4,7 @@
 }
 img {
   width: 2em;
+  max-width:100%
 }
 li {
   list-style: none;
@@ -13,4 +14,15 @@ body {
 }
 .navbar {
   background-color: #41937F;
+  margin-bottom: 1.5em;
+}
+.navbar ul {
+  display: inline-flex;
+}
+.navbar a {
+  text-decoration: none;
+  padding-right: 1em;
+}
+.template2 {
+  display: none;
 }
