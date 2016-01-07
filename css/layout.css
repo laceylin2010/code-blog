@@ -2,16 +2,6 @@
 .photoMe {
   width: 20em;
 }
-img {
-  width: 2em;
-  max-width:100%
-}
-li {
-  list-style: none;
-}
-body {
-  background-color: #F7FFEF;
-}
 .navbar {
   background-color: #41937F;
   margin-bottom: 1.5em;
@@ -25,4 +15,7 @@ body {
 }
 .template2 {
   display: none;
+}
+.photoMe{
+  border-radius: 20%
 }

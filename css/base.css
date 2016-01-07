@@ -1,0 +1,15 @@
+li {
+  list-style: none;
+}
+body {
+  background-color: #F7FFEF;
+}
+img {
+  width: 2em;
+  max-width:100%;
+
+}
+#wrapper {
+  width: 75%;
+  margin: auto;
+}
