@@ -78,13 +78,13 @@ $('#about-me').on('click', function(){
 $('#employedhistory').on('click', function(){
   $('.jobhistory').fadeIn(1500);
   $('.bio').fadeOut('fast', function() {
-    $('.pers-Proj').fadeOut('fast');
+    $('.pers-proj').fadeOut('fast');
     $('hr').fadeOut('fast');
   });
 });
 
 $('#projecthistory').on('click', function(){
-  $('.pers-Proj').fadeIn(1500);
+  $('.pers-proj').fadeIn(1500);
   $('.bio').fadeOut('fast', function(){
     $('.jobhistory').fadeOut('fast');
     $('hr').fadeOut('fast');
