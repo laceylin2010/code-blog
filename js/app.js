@@ -65,30 +65,30 @@ careers.forEach(function(a){
   $('#myCoolStuff2').append(a.toHTML());
 });
 
-// $('#about-me').on('click', function(){
-//   $('.bio').fadeIn(1500);
-//   $('.jobhistory').fadeOut('fast', function() {
-//     $('.pers-proj').fadeOut('fast');
-//     $('hr').fadeOut('fast');
-//   });
-// });
-//
-// $('#employedhistory').on('click', function(){
-//   $('.jobhistory').fadeIn(1500);
-//   $('.bio').fadeOut('fast', function() {
-//     $('.pers-proj').fadeOut('fast');
-//     $('hr').fadeOut('fast');
-//   });
-// });
-//
-// $('#projecthistory').on('click', function(){
-//   $('.pers-proj').fadeIn(1500);
-//   $('.bio').fadeOut('fast', function(){
-//     $('.jobhistory').fadeOut('fast');
-//     $('hr').fadeOut('fast');
-//   });
-// });
-//
-// $('#mainpage').on('click', function(){
-//   location.reload();
-// });
+$('#about-me').on('click', function(){
+  $('.bio').fadeIn(1500);
+  $('.jobhistory').fadeOut('fast', function() {
+    $('.pers-proj').fadeOut('fast');
+    $('hr').fadeOut('fast');
+  });
+});
+
+$('#employedhistory').on('click', function(){
+  $('.jobhistory').fadeIn(1500);
+  $('.bio').fadeOut('fast', function() {
+    $('.pers-proj').fadeOut('fast');
+    $('hr').fadeOut('fast');
+  });
+});
+
+$('#projecthistory').on('click', function(){
+  $('.pers-proj').fadeIn(1500);
+  $('.bio').fadeOut('fast', function(){
+    $('.jobhistory').fadeOut('fast');
+    $('hr').fadeOut('fast');
+  });
+});
+
+$('#mainpage').on('click', function(){
+  location.reload();
+});
