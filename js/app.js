@@ -14,21 +14,6 @@ Info.prototype.toHTML = function(){
   return compileTemplate(this);
 };
 
-//   var $newInfo = $('article.template').clone();
-//
-//   $newInfo.find('h2').html('<a href="' + this.titleUrl + '">' + this.title + '</a>');
-//   // $newInfo.find('h2').text(this.title);
-//   $newInfo.find('.authorname').text(this.author);
-//   $newInfo.find('.datetime').text(this.publishedOn);
-//   $newInfo.find('date[pubdate]').attr('title', this.publishedOn);
-//   $newInfo.find('time').html('about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago');
-//   $newInfo.append('<hr>');
-//   $newInfo.removeClass('template');
-//
-//   return $newInfo;
-// };
-// };
-
 portfolioData.sort(function(a,b){
   return(new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
@@ -42,16 +27,21 @@ portfolio.forEach(function(b){
 });
 
 
-// var careers = [];
-//
-// function Jobs(jobhistory){
-//   this.jobTitle = jobhistory.jobTitle;
-//   this.company = jobhistory.company;
-//   this.datesWorked = jobhistory.datesWorked;
-//   this.jobDescript = jobhistory.jobDescript;
-// }
-//
-// Jobs.prototype.toHTML = function () {
+var careers = [];
+
+function Jobs(jobhistory){
+  this.jobTitle = jobhistory.jobTitle;
+  this.company = jobhistory.company;
+  this.datesWorked = jobhistory.datesWorked;
+  this.jobDescript = jobhistory.jobDescript;
+}
+
+Jobs.prototype.toHTML = function () {
+  var employmentTemplate = $('#testing2').html();
+  var compileTemplate = Handlebars.compile(employmentTemplate);
+  return compileTemplate(this);
+};
+
 //   var $newJob = $('article.template2').clone();
 //
 //   $newJob.find('h2').text(this.jobTitle);
@@ -65,15 +55,16 @@ portfolio.forEach(function(b){
 //   return $newJob;
 // };
 //
-// jobData.forEach(function(ele){
-//   careers.push(new Jobs(ele));
-// });
-//
-// careers.forEach(function(a){
-//   // console.log(a.toHTML());
-//   $('#employment').append(a.toHTML());
-// });
-//
+jobData.forEach(function(ele){
+  careers.push(new Jobs(ele));
+  // console.log(careers);
+});
+
+careers.forEach(function(a){
+  // console.log(a.toHTML());
+  $('#myCoolStuff2').append(a.toHTML());
+});
+
 // $('#about-me').on('click', function(){
 //   $('.bio').fadeIn(1500);
 //   $('.jobhistory').fadeOut('fast', function() {

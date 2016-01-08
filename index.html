@@ -44,7 +44,7 @@
       <article class='template' data-category='projects'>
         <header>
             <div class='pers-proj'>
-              <h2><a href='{{title}}'></a></h2>
+              <h2><a href='{{titleUrl}}'>{{title}}</a></h2>
               <p>By: <span class='authorname'> {{author}} </span><br></br>
               Published <time class='{{publishedOn}}' datePublished='2000-01-01'>Published Time </time>
             </div>
@@ -52,21 +52,21 @@
       </article>
     </section>
   </script>
-  <div id="myCoolStuff"><p>I'm here, I'm super cool</p></div>
+  <div id="myCoolStuff"></div>
 
   <script id='testing2' type='text/x-handlebars-template'>
     <section id='employment' class='jobhistory'>
       <article class='template2' data-category='previousjobs'>
           <header>
-            <h2>Job Title</h2>
+            <h2>{{jobTitle}}</h2>
               <p class='company'>Company</p>
               <p class='employeddates'>Dates Worked</p>
               <p class='jobdescription'>Job Description</p>
             </header>
         </article>
       </section>
-  <div id="myCoolStuff2"><p>I'm here, I'm super cool</p></div>
-</script>
+  </script>
+  <div id="myCoolStuff2"></div>
 
 
       <script src='js/jquery.js'></script>
