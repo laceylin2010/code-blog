@@ -1,6 +1,9 @@
 
 .photoMe {
   width: 20em;
+  border: solid;
+  border-radius: 20%
+
 }
 .navbar {
   background-color: #41937F;
@@ -22,6 +25,6 @@
 .template2 {
   display: none;
 }
-.photoMe{
-  border-radius: 20%
+.myname{
+  padding-left: .2em;
 }
