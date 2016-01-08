@@ -20,10 +20,10 @@
       <h1>Lacey Vu</h1>
         <nav class='navbar' >
           <ul>
-            <li class='icon-home'><a href='#' id='mainpage'>Home</a></li>
-            <li class='icon icon-user'><a href='#' id='about-me'>About</a></li>
-            <li><a href='' class='projectlink'>Projects</a><li>
-            <li><a href='' id='employedhistory'>Employment</a></li>
+            <li class='icon-home' id='mainpage'>Home</li>
+            <li class='icon icon-user' id="about-me">About</li>
+            <li class='projectlink' id="projecthistory" >Projects</a><li>
+            <li class='employed' id='employedhistory' >Employment</li>
           </ul>
         </nav>
     </header>
@@ -44,9 +44,9 @@
       <article class='template' data-category='projects'>
         <header>
             <div class='persProj'>
-              <h1>Title</h1>
-                By <address>Author Name</address>
-                Published <time datePublished='2000-01-01'>Published Time </time>
+              <h2><a href=''>Title</a></h2>
+                By: <address class='authorname'> Author Name </address>
+                Published <time class='datetime' datePublished='2000-01-01'>Published Time </time>
             </div>
         </header>
       </article>
@@ -65,8 +65,8 @@
 
       <script src='js/jquery.js'></script>
       <script src='js/jobs.js'></script>
-      <script src='js/app.js'></script>
       <script src='js/portfolio.js'></script>
+      <script src='js/app.js'></script>
 
     </div>
   </body>

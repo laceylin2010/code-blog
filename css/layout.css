@@ -15,6 +15,9 @@
   padding-right: 1em;
   color: black;
 }
+.template {
+  display: none;
+}
 .template2 {
   display: none;
 }
