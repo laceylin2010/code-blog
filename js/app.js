@@ -50,7 +50,7 @@ Jobs.prototype.toHTML = function () {
   $newJob.find('h2').text(this.jobTitle);
   // console.log(this.jobTitle);
   $newJob.find('.company').text(this.company);
-  $newJob.find('.employedDates').text(this.datesWorked);
+  $newJob.find('.employeddates').text(this.datesWorked);
   $newJob.find('.jobdescription').text(this.jobDescript);
   $newJob.append('<hr>');
 
@@ -70,7 +70,7 @@ careers.forEach(function(a){
 $('#about-me').on('click', function(){
   $('.bio').fadeIn(1500);
   $('.jobhistory').fadeOut('fast', function() {
-    $('.persProj').fadeOut('fast');
+    $('.pers-proj').fadeOut('fast');
     $('hr').fadeOut('fast');
   });
 });
@@ -78,15 +78,15 @@ $('#about-me').on('click', function(){
 $('#employedhistory').on('click', function(){
   $('.jobhistory').fadeIn(1500);
   $('.bio').fadeOut('fast', function() {
-    $('.persProj').fadeOut('fast');
+    $('.pers-Proj').fadeOut('fast');
     $('hr').fadeOut('fast');
   });
 });
 
 $('#projecthistory').on('click', function(){
-  $('.persProj').fadeIn(1500);
+  $('.pers-Proj').fadeIn(1500);
   $('.bio').fadeOut('fast', function(){
-    $('jobhistory').fadeOut('fast');
+    $('.jobhistory').fadeOut('fast');
     $('hr').fadeOut('fast');
   });
 });
