@@ -1,0 +1,18 @@
+li {
+  list-style: none;
+  padding-left: 1em;
+}
+body {
+  background-color: #F7FFEF;
+  font-family: Architects Daughter, cursive;
+}
+img {
+  width: 2em;
+  max-width:100%;
+
+
+}
+#wrapper {
+  width: 75%;
+  margin: auto;
+}

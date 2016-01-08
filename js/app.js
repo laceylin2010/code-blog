@@ -1,68 +1,96 @@
-// var portfolio = [];
+var portfolio = [];
 
 function Info (info){
   this.title = info.title;
-  this.url = info.url;
+  this.titleUrl = info.titleUrl;
   this.author = info.author;
-  this.datePublished = info.datePublished;
+  this.publishedOn = info.publishedOn;
 }
 
-Info.prototype.toHTML = function () {
-  var $newInfo = $('article.portProjects').clone();
+Info.prototype.toHTML = function(){
+  var $newInfo = $('article.template').clone();
 
-  $newInfo.find('h1').text(this.title);
-  $newInfo.find('url', this.url);
-  $newInfo.find('author', this.author);
-  $newInfo.find('date', this.datePublished);
-  $newInfo.find('time[pubdate]').attr('title', this.datePublished);
-  $newInfo.find('time').html('about ' + parseInt((new Date() - new Date (this.datePublished))/60/60/24/1000) + 'days ago');
-
+  $newInfo.find('h2').html('<a href="' + this.titleUrl + '">' + this.title + '</a>');
+  // $newInfo.find('h2').text(this.title);
+  $newInfo.find('.authorname').text(this.author);
+  $newInfo.find('.datetime').text(this.publishedOn);
+  $newInfo.find('date[pubdate]').attr('title', this.publishedOn);
+  $newInfo.find('time').html('about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago');
   $newInfo.append('<hr>');
-
-  $newInfo.removeClass('portProjects');
+  $newInfo.removeClass('template');
 
   return $newInfo;
 };
 
-rawData.sort(function(a,b){
-  return(new Date(b.datePublished)) - (new Date(a.datePublished));
+portfolioData.sort(function(a,b){
+  return(new Date(b.publishedOn)) - (new Date(a.publishedOn));
+});
+
+portfolioData.forEach(function(ele){
+  portfolio.push(new Info(ele));
+});
+
+portfolio.forEach(function(b){
+  $('#portfolio').append(b.toHTML());
 });
 
 
-var jobData = [];
+var careers = [];
 
-function JobsWorked(jobs){
-  this.company = jobs.company;
-  this.jobTitle = jobs.jobTitle;
-  this.dateStarted = jobs.dateStarted;
-  this.dateEnded = jobs.dateEnded;
-  this.jobDescript = jobs.jobDescript;
-  this.jobPublished = jobs.jobPublished;
+function Jobs(jobhistory){
+  this.jobTitle = jobhistory.jobTitle;
+  this.company = jobhistory.company;
+  this.datesWorked = jobhistory.datesWorked;
+  this.jobDescript = jobhistory.jobDescript;
 }
 
-JobsWorked.prototype.toHTML = function () {
-  var $newJob = ('article','portJobs').clone();
+Jobs.prototype.toHTML = function () {
+  var $newJob = $('article.template2').clone();
 
-  $newJob.find('portJobs h1').text(this.company);
-  $newJob.data('jobTitle', this.jobTitle);
-  $newJob.data('dateStarted', this.dateStarted);
-  $newJob.data('dateEnded', this.dateEnded);
-  $newJob.data('jobDescript', this.jobDescript);
-  $newJob.data('jobPublished', this.jobPublished);
+  $newJob.find('h2').text(this.jobTitle);
+  // console.log(this.jobTitle);
+  $newJob.find('.company').text(this.company);
+  $newJob.find('.employeddates').text(this.datesWorked);
+  $newJob.find('.jobdescription').text(this.jobDescript);
   $newJob.append('<hr>');
 
-  $newJob.removeClass('portJobs');
+  $newJob.removeClass('template2');
   return $newJob;
 };
 
-jobData.sort(function(a,b){
-  return(new Date(b.jobPublished)) - (new Date(a.jobPublished));
-});
-
 jobData.forEach(function(ele){
-  jobData.push(new JobsWorked(ele));
+  careers.push(new Jobs(ele));
 });
 
-jobData.forEach(function(a){
-  $('#portfolio').apprend(a.toHTML());
+careers.forEach(function(a){
+  // console.log(a.toHTML());
+  $('#employment').append(a.toHTML());
+});
+
+$('#about-me').on('click', function(){
+  $('.bio').fadeIn(1500);
+  $('.jobhistory').fadeOut('fast', function() {
+    $('.pers-proj').fadeOut('fast');
+    $('hr').fadeOut('fast');
+  });
+});
+
+$('#employedhistory').on('click', function(){
+  $('.jobhistory').fadeIn(1500);
+  $('.bio').fadeOut('fast', function() {
+    $('.pers-Proj').fadeOut('fast');
+    $('hr').fadeOut('fast');
+  });
+});
+
+$('#projecthistory').on('click', function(){
+  $('.pers-Proj').fadeIn(1500);
+  $('.bio').fadeOut('fast', function(){
+    $('.jobhistory').fadeOut('fast');
+    $('hr').fadeOut('fast');
+  });
+});
+
+$('#mainpage').on('click', function(){
+  location.reload();
 });
