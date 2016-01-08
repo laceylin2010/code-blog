@@ -1,18 +1,19 @@
-li {
+li{
   list-style: none;
   padding-left: 1em;
 }
-body {
+
+body{
   background-color: #F7FFEF;
   font-family: Architects Daughter, cursive;
 }
-img {
+
+img{
   width: 2em;
   max-width:100%;
-
-
 }
-#wrapper {
+
+#wrapper{
   width: 75%;
   margin: auto;
 }

@@ -1,30 +1,35 @@
 
-.photoMe {
+.photome{
   width: 20em;
   border: solid;
   border-radius: 20%
-
 }
-.navbar {
+
+.navbar{
   background-color: #41937F;
   margin-bottom: 1.5em;
   margin-top:1.5em;
 }
-.navbar ul {
+
+.navbar ul{
   display: inline-flex;
   margin-bottom: 0;
 }
-.navbar a {
+
+.navbar a{
   text-decoration: none;
   padding-right: 1em;
   color: black;
 }
-.template {
+
+.template{
   display: none;
 }
-.template2 {
+
+.template2{
   display: none;
 }
+
 .myname{
   padding-left: .2em;
 }
