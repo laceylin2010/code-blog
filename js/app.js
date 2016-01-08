@@ -68,14 +68,26 @@ careers.forEach(function(a){
 });
 
 $('#about-me').on('click', function(){
+  $('.bio').fadeIn(1500);
   $('.jobhistory').fadeOut('fast', function() {
-    $('.bio').fadeIn('fast');
+    $('.persProj').fadeOut('fast');
+    $('hr').fadeOut('fast');
   });
 });
 
 $('#employedhistory').on('click', function(){
+  $('.jobhistory').fadeIn(1500);
   $('.bio').fadeOut('fast', function() {
-    $('.jobhistory').fadeIn('fast');
+    $('.persProj').fadeOut('fast');
+    $('hr').fadeOut('fast');
+  });
+});
+
+$('#projecthistory').on('click', function(){
+  $('.persProj').fadeIn(1500);
+  $('.bio').fadeOut('fast', function(){
+    $('jobhistory').fadeOut('fast');
+    $('hr').fadeOut('fast');
   });
 });
 
