@@ -14,7 +14,6 @@
 }
 
 .navbar ul{
-  /*display: inline-flex;*/
   margin-bottom: 0;
 }
 
@@ -23,15 +22,24 @@
   padding-right: 1em;
   color: black;
 }
-/*
-.template{
-  display: none;
-}*/
-/*
-.template2{
-  display: none;
-}*/
 
 .myname{
   padding-left: .2em;
 }
+
+/*
+@media only screen and (min-width: 640px) {
+  .hamburger{
+    display: none;
+ }
+   .navbar ul{
+     display: block;
+ }
+
+/*@media only screen and (max-width: 640px) {
+  .hamburger{
+    display: block;
+  }
+  .menubar ul{
+    display: !none;
+  }*/
