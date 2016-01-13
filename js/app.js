@@ -8,18 +8,10 @@ function Info (info){
 }
 
 Info.prototype.toHTML = function(){
-  var $newInfo = $('article.template').clone();
+  var portfolioTemplate = $('#about-template').html();
 
-  $newInfo.find('h2').html('<a href="' + this.titleUrl + '">' + this.title + '</a>');
-  // $newInfo.find('h2').text(this.title);
-  $newInfo.find('.authorname').text(this.author);
-  $newInfo.find('.datetime').text(this.publishedOn);
-  $newInfo.find('date[pubdate]').attr('title', this.publishedOn);
-  $newInfo.find('time').html('about ' + parseInt((new Date() - new Date (this.publishedOn))/60/60/24/1000) + ' days ago');
-  $newInfo.append('<hr>');
-  $newInfo.removeClass('template');
-
-  return $newInfo;
+  var compileTemplate = Handlebars.compile(portfolioTemplate);
+  return compileTemplate(this);
 };
 
 portfolioData.sort(function(a,b){
@@ -31,7 +23,7 @@ portfolioData.forEach(function(ele){
 });
 
 portfolio.forEach(function(b){
-  $('#portfolio').append(b.toHTML());
+  $('#myCoolStuff').append(b.toHTML());
 });
 
 
@@ -45,26 +37,32 @@ function Jobs(jobhistory){
 }
 
 Jobs.prototype.toHTML = function () {
-  var $newJob = $('article.template2').clone();
-
-  $newJob.find('h2').text(this.jobTitle);
-  // console.log(this.jobTitle);
-  $newJob.find('.company').text(this.company);
-  $newJob.find('.employeddates').text(this.datesWorked);
-  $newJob.find('.jobdescription').text(this.jobDescript);
-  $newJob.append('<hr>');
-
-  $newJob.removeClass('template2');
-  return $newJob;
+  var employmentTemplate = $('#employment-template').html();
+  var compileTemplate = Handlebars.compile(employmentTemplate);
+  return compileTemplate(this);
 };
 
+//   var $newJob = $('article.template2').clone();
+//
+//   $newJob.find('h2').text(this.jobTitle);
+//   // console.log(this.jobTitle);
+//   $newJob.find('.company').text(this.company);
+//   $newJob.find('.employeddates').text(this.datesWorked);
+//   $newJob.find('.jobdescription').text(this.jobDescript);
+//   $newJob.append('<hr>');
+//
+//   $newJob.removeClass('template2');
+//   return $newJob;
+// };
+//
 jobData.forEach(function(ele){
   careers.push(new Jobs(ele));
+  // console.log(careers);
 });
 
 careers.forEach(function(a){
   // console.log(a.toHTML());
-  $('#employment').append(a.toHTML());
+  $('#myCoolStuff2').append(a.toHTML());
 });
 
 $('#about-me').on('click', function(){
@@ -78,19 +76,19 @@ $('#about-me').on('click', function(){
 $('#employedhistory').on('click', function(){
   $('.jobhistory').fadeIn(1500);
   $('.bio').fadeOut('fast', function() {
-    $('.pers-Proj').fadeOut('fast');
+    $('.pers-proj').fadeOut('fast');
     $('hr').fadeOut('fast');
   });
 });
 
 $('#projecthistory').on('click', function(){
-  $('.pers-Proj').fadeIn(1500);
+  $('.pers-proj').fadeIn(1500);
   $('.bio').fadeOut('fast', function(){
     $('.jobhistory').fadeOut('fast');
     $('hr').fadeOut('fast');
   });
 });
 
-$('#mainpage').on('click', function(){
+$('#main-page').on('click', function(){
   location.reload();
 });
