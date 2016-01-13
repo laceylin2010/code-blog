@@ -8,7 +8,7 @@ function Info (info){
 }
 
 Info.prototype.toHTML = function(){
-  var portfolioTemplate = $('#testing').html();
+  var portfolioTemplate = $('#about-template').html();
 
   var compileTemplate = Handlebars.compile(portfolioTemplate);
   return compileTemplate(this);
@@ -37,7 +37,7 @@ function Jobs(jobhistory){
 }
 
 Jobs.prototype.toHTML = function () {
-  var employmentTemplate = $('#testing2').html();
+  var employmentTemplate = $('#employment-template').html();
   var compileTemplate = Handlebars.compile(employmentTemplate);
   return compileTemplate(this);
 };
@@ -89,6 +89,6 @@ $('#projecthistory').on('click', function(){
   });
 });
 
-$('#mainpage').on('click', function(){
+$('#main-page').on('click', function(){
   location.reload();
 });

@@ -27,7 +27,7 @@
               </ul>
               <ul class='menubar'>
                 <img src='imgs/hamburger.png' class='hamburger'>
-                <li id='mainpage'>Home</li>
+                <li id='main-page'>Home</li>
                 <li id="about-me">About</li>
                 <li class='projectlink' id="projecthistory" >Projects</a></li>
                 <li class='employed' id='employedhistory'>Employment</li>
@@ -40,14 +40,14 @@
         <h1>About Me</h1>
           <p>My name is Lacey and I have an Associates in Business from Highline Community College. Later down the years, I found out that I did not know what to exactly do with my degree and ended up working a bunch of jobs that did not relate as much instead. I heard of code fellows from a friend and decided to give it a try. After taking 201 I have realized how much I enjoy it and how awesome it would be to turn into a career. So here goes!</p>
       </section>
-      <script id='testing' type='text/x-handlebars-template'>
+      <script id='about-template' type='text/x-handlebars-template'>
         <section id='portfolio'>
           <article class='template' data-category='projects'>
             <header>
               <div class='pers-proj'>
-                <h2><a href='{{titleUrl}}'>{{title}}</a></h2>
-                <p>By: <span class='authorname'> {{author}} </span><br></br>
-                Published <time class='{{publishedOn}}' datePublished='2000-01-01'>Published Time </time>
+                <h><a href='{{titleUrl}}'>{{title}}</a></h>
+                <p>By: <span class='authorname'> {{author}} </span>
+                Published <time pubdate datePublished='2000-01-01'>{{publishedOn}} </time></p>
               </div>
             </header>
           </article>
@@ -56,17 +56,17 @@
       </script>
       <div id="myCoolStuff"></div>
 
-      <script id='testing2' type='text/x-handlebars-template'>
+      <script id='employment-template' type='text/x-handlebars-template'>
         <section id='employment' class='jobhistory'>
           <article class='template2' data-category='previousjobs'>
             <header>
               <h2>{{jobTitle}}</h2>
-                <p>{{company}}</p>
-                <p>{{datesWorked}}</p>
-                <p>{{jobDescript}}</p>
-              </header>
-            </article>
-          </section>
+              <p>{{company}}</p>
+              <p>{{datesWorked}}</p>
+              <p>{{jobDescript}}</p>
+            </header>
+          </article>
+        </section>
       </script>
       <div id="myCoolStuff2"></div>
 
