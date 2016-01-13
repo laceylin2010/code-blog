@@ -67,24 +67,24 @@ careers.forEach(function(a){
 
 $('#about-me').on('click', function(){
   $('.bio').fadeIn(1500);
-  $('.jobhistory').fadeOut('fast', function() {
+  $('.job-history').fadeOut('fast', function() {
     $('.pers-proj').fadeOut('fast');
     $('hr').fadeOut('fast');
   });
 });
 
-$('#employedhistory').on('click', function(){
-  $('.jobhistory').fadeIn(1500);
+$('#employed-history').on('click', function(){
+  $('.job-history').fadeIn(1500);
   $('.bio').fadeOut('fast', function() {
     $('.pers-proj').fadeOut('fast');
     $('hr').fadeOut('fast');
   });
 });
 
-$('#projecthistory').on('click', function(){
+$('#project-history').on('click', function(){
   $('.pers-proj').fadeIn(1500);
   $('.bio').fadeOut('fast', function(){
-    $('.jobhistory').fadeOut('fast');
+    $('.jobh-history').fadeOut('fast');
     $('hr').fadeOut('fast');
   });
 });

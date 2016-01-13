@@ -1,5 +1,6 @@
 
-.photome{
+
+.photo-me{
   width: 20em;
   border: solid;
   border-radius: 20%
@@ -24,7 +25,7 @@
   color: black;
 }
 
-.myname{
+.my-name{
   padding-left: .2em;
 }
 
