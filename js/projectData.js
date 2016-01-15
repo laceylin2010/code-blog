@@ -1,4 +1,4 @@
-var portfolioData = [
+var projectData = [
   {
     title: 'Beernuts',
     titleUrl: 'http://laceylin2010.github.io/BeerNuts/',
