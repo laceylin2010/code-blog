@@ -25,17 +25,17 @@
           </ul>
           <ul class='menu-bar'>
             <img src='imgs/hamburger.png' class='hamburger'>
-              <li id='mainpage' data-content='resume' class='tablinks'>Home</li>
-              <li id="about-me" data-content='bio' class='tablinks'>About</li>
-              <li id="project-history" data-content='portfolio' class='project-link tablinks' >Projects</a></li>
-              <li id='employed-history' data-content='job-history' class='employed tablinks' >Employment</li>
+              <li id='mainpage' data-content='resume' class='tablinks'><a href='./' >Home</li></a>
+              <li id="about-me" data-content='bio' class='tablinks'><a href='./about'>About</li></a>
+              <li id="project-history" data-content='portfolio' class='project-link tablinks'><a href='./projects'>Projects</a></li>
+              <li id='employed-history' data-content='job-history' class='employed tablinks'><a href='./employment'>Employment</li></a>
           </ul>
         </header>
       </section>
       <section class= 'seven columns'>
-      <section id='aboutme' class='bio resume' >
+      <section id='aboutme' class='bio resume nav-content' >
         <h1>About Me</h1>
-          <p>My name is Lacey and I h`ave an Associates in Business from Highline Community College. Later down the years, I found out that I did not know what to exactly do with my degree and ended up working a bunch of jobs that did not relate as much instead. I heard of code fellows from a friend and decided to give it a try. After taking 201 I have realized how much I enjoy it and how awesome it would be to turn into a career. So here goes!</p>
+          <p>My name is Lacey and I have an Associates in Business from Highline Community College. Later down the years, I found out that I did not know what to exactly do with my degree and ended up working a bunch of jobs that did not relate as much instead. I heard of code fellows from a friend and decided to give it a try. After taking 201 I have realized how much I enjoy it and how awesome it would be to turn into a career. So here goes!</p>
       </section>
       <script id='about-template' type='text/x-handlebars-template'>
         <section id='portfolio' class='resume portfolio'>
@@ -51,7 +51,7 @@
         </section>
       </section>
       </script>
-      <div id="myCoolStuff"></div>
+      <div id="projects" class='nav-content'></div>
 
       <script id='employment-template' type='text/x-handlebars-template'>
         <section id='employment' class='job-history resume'>
@@ -65,9 +65,10 @@
           </article>
         </section>
       </script>
-      <div id="myCoolStuff2"></div>
+      <div id="work-history" class='nav-content'></div>
 
       <script src='js/jquery.js'></script>
+      <script src='vendor/page.js'></script>
       <script src='vendor/handlebars-v4.0.5.js'></script>
       <script src='vendor/marked.js'></script>
       <script src='js/job.js'></script>
@@ -75,16 +76,19 @@
       <script src='js/project.js'></script>
       <script src='js/projectView.js'></script>
       <script src='js/movie.js'></script>
+      <script src='js/homeController.js'></script>
+      <script src='js/aboutController.js'></script>
+      <script src='js/projectController.js'></script>
+      <script src='js/employmentController.js'></script>
+      <script src='js/routes.js'></script>
 
 
       <script>
-        Job.fetchAll();
-        Project.fetchAll();
 
-        $('.tablinks').on('click', function(){
-          $('.resume').fadeOut('fast');
-          $('.' + $(this).data('content')).fadeIn(1500);
-        });
+    //  $('.tablinks').on('click', function(){
+    //       $('.resume').fadeOut('fast');
+    //       $('.' + $(this).data('content')).fadeIn(1500);
+    //     });
      </script>
 
   </body>

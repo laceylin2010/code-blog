@@ -24,7 +24,7 @@ Job.fetchAll = function(){
     Job.loadAll(JSON.parse(localStorage.jobData));
     jobView.initIndexPage();
   } else {
-    $.getJSON('/data/jobs.json', function(jobData){
+    $.getJSON('/data/job.json', function(jobData){
       Job.loadAll(jobData);
       localStorage.jobData = JSON.stringify(jobData);
       jobView.initIndexPage();
