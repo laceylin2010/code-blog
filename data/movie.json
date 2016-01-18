@@ -1,0 +1,26 @@
+[
+  {
+  "title": "The Avengers",
+  "director": "Joss Whedon",
+  "genre": "Action",
+  "summary": "##Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity."
+},
+{
+  "title": "Inside Out",
+  "director": "Pete Docter, Ronnie Del Carmen",
+  "genre": "Animation, Adventure, Comedy",
+  "summary": "##After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school."
+},
+{
+  "title": "TrainWreck",
+  "director": "Judd Apatow",
+  "genre": "Comedy, Romance",
+  "summary": "##Having thought that monogamy was never possible, a commitment-phobic career woman may have to face her fears when she meets a good guy."
+},
+{
+  "title": "The Hunger Games",
+  "director": "Gary Ross",
+  "genre": "Adventure, Drama, Sci-Fi",
+  "summary": "##Katniss Everdeen voluntarily takes her younger sister's place in the Hunger Games, a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death."
+}
+]

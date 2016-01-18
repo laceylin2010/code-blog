@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <!-- <meta name='viewport' content='width=device-width', initial-scale='1'> -->
     <title>Lacey's Portfolio</title>
     <link href='css/normalize.css' type='text/css' rel='stylesheet'>
     <link href='css/skeleton.css' type='text/css' rel='stylesheet'>
@@ -14,39 +13,37 @@
 
   </head>
   <body>
-      <section class='five columns'>
-        <header class='navbar'>
-          <h1 class='myname'>Lacey Vu</h1>
-          <img src='imgs/lacey.jpg' class='photome'>
-            <nav class='navbar' >
-              <ul class='social media'>
-                <a href='https://www.facebook.com/lacelin2010'><img src='imgs/facebook.png'></a>
-                <a href='https://twitter.com/LaceyVu'><img src='imgs/twitter.png'></a>
-                <a href='https://www.linkedin.com/profile/view?id=AAMAABFJIagBqvNwtZ8994EGUah_0nwhuXFxaRA&trk=hp-identity-photo'><img src='imgs/linkedin.png'></a>
-                <a href='https://github.com/laceylin2010'><img src='imgs/github.jpg'></a>
-              </ul>
-              <ul class='menubar'>
-                <img src='imgs/hamburger.png' class='hamburger'>
-                <li id='main-page'>Home</li>
-                <li id="about-me">About</li>
-                <li class='projectlink' id="projecthistory" >Projects</a></li>
-                <li class='employed' id='employedhistory'>Employment</li>
-              </ul>
-          </nav>
-      </header>
-    </section>
-    <section class= 'seven columns'>
-      <section id='aboutme' class='bio' >
+    <section class='four columns all-about-me'>
+      <header class='navbar'>
+        <h1 class='my-name'>Lacey Vu</h1>
+        <img src='imgs/lacey.jpg' class='photo-me'>
+          <ul class='social-media'>
+            <a href='https://www.facebook.com/lacelin2010'><img src='imgs/facebook.png'></a>
+            <a href='https://twitter.com/LaceyVu'><img src='imgs/twitter.png'></a>
+            <a href='https://www.linkedin.com/profile/view?id=AAMAABFJIagBqvNwtZ8994EGUah_0nwhuXFxaRA&trk=hp-identity-photo'><img src='imgs/linkedin.png'></a>
+            <a href='https://github.com/laceylin2010'><img src='imgs/github.jpg'></a>
+          </ul>
+          <ul class='menu-bar'>
+            <img src='imgs/hamburger.png' class='hamburger'>
+              <li id='mainpage' data-content='resume' class='tablinks'>Home</li>
+              <li id="about-me" data-content='bio' class='tablinks'>About</li>
+              <li id="project-history" data-content='portfolio' class='project-link tablinks' >Projects</a></li>
+              <li id='employed-history' data-content='job-history' class='employed tablinks' >Employment</li>
+          </ul>
+        </header>
+      </section>
+      <section class= 'seven columns'>
+      <section id='aboutme' class='bio resume' >
         <h1>About Me</h1>
-          <p>My name is Lacey and I have an Associates in Business from Highline Community College. Later down the years, I found out that I did not know what to exactly do with my degree and ended up working a bunch of jobs that did not relate as much instead. I heard of code fellows from a friend and decided to give it a try. After taking 201 I have realized how much I enjoy it and how awesome it would be to turn into a career. So here goes!</p>
+          <p>My name is Lacey and I h`ave an Associates in Business from Highline Community College. Later down the years, I found out that I did not know what to exactly do with my degree and ended up working a bunch of jobs that did not relate as much instead. I heard of code fellows from a friend and decided to give it a try. After taking 201 I have realized how much I enjoy it and how awesome it would be to turn into a career. So here goes!</p>
       </section>
       <script id='about-template' type='text/x-handlebars-template'>
-        <section id='portfolio'>
+        <section id='portfolio' class='resume portfolio'>
           <article class='template' data-category='projects'>
             <header>
               <div class='pers-proj'>
-                <h><a href='{{titleUrl}}'>{{title}}</a></h>
-                <p>By: <span class='authorname'> {{author}} </span>
+                <p><a href='{{titleUrl}}'>{{title}}</a></p>
+                <p>By: <span class='author-name'> {{author}} </span>
                 Published <time pubdate datePublished='2000-01-01'>{{publishedOn}} </time></p>
               </div>
             </header>
@@ -57,8 +54,8 @@
       <div id="myCoolStuff"></div>
 
       <script id='employment-template' type='text/x-handlebars-template'>
-        <section id='employment' class='jobhistory'>
-          <article class='template2' data-category='previousjobs'>
+        <section id='employment' class='job-history resume'>
+          <article class='template2' data-category='previous-jobs'>
             <header>
               <h2>{{jobTitle}}</h2>
               <p>{{company}}</p>
@@ -72,9 +69,23 @@
 
       <script src='js/jquery.js'></script>
       <script src='vendor/handlebars-v4.0.5.js'></script>
-      <script src='js/jobs.js'></script>
-      <script src='js/portfolio.js'></script>
-      <script src='js/app.js'></script>
+      <script src='vendor/marked.js'></script>
+      <script src='js/job.js'></script>
+      <script src='js/jobView.js'></script>
+      <script src='js/project.js'></script>
+      <script src='js/projectView.js'></script>
+      <script src='js/movie.js'></script>
+
+
+      <script>
+        Job.fetchAll();
+        Project.fetchAll();
+
+        $('.tablinks').on('click', function(){
+          $('.resume').fadeOut('fast');
+          $('.' + $(this).data('content')).fadeIn(1500);
+        });
+     </script>
 
   </body>
 </html>

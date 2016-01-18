@@ -1,8 +1,8 @@
 
-.photome{
+.photo-me{
   width: 20em;
   border: solid;
-  border-radius: 20%
+  border-radius: 20%;
 }
 
 .navbar{
@@ -24,9 +24,21 @@
   color: black;
 }
 
-.myname{
+.my-name{
   padding-left: .2em;
 }
+
+
+.logo-icons{
+  width: 2em;
+  max-width:100%;
+}
+
+.bio{
+  margin: auto;
+  border: solid .2em;
+}
+
 
 /*
 @media only screen and (min-width: 640px) {
