@@ -10,7 +10,6 @@
             '?per_page=100' +
             '&sort=updated',
       type: 'GET',
-      headers: { 'Authorization': 'token ' + githubToken },
       success: function(data, message, xhr) {
         console.log(data);
         repos.all = data;
