@@ -1,58 +1,35 @@
 
 .photo-me{
   width: 20em;
-  border: solid;
+  /*border: solid;*/
   border-radius: 20%;
 }
 
-.navbar{
-  background-color: #41937F;
-  margin-bottom: 1.5em;
-  margin-top:1.5em;
-  margin-left: 1em;
-  padding-left:2em;
-  padding-right:2em;
-}
-
-.navbar ul{
-  margin-bottom: 0;
-}
-
-.navbar a{
-  text-decoration: none;
-  padding-right: 1em;
-  color: black;
+.my-image{
+  float: left;
 }
 
 .my-name{
-  padding-left: .2em;
+  color: black;
 }
 
-
-.logo-icons{
-  width: 2em;
-  max-width:100%;
+.navbar-menu{
+  text-align: center;
 }
 
-.bio{
-  margin: auto;
-  border: solid .2em;
+#aboutme, .employ-background-section{
+  background-color: black;
+  color: white;
 }
 
+.personal-section{
+  min-height: 23em;
+}
 
-/*
-@media only screen and (min-width: 640px) {
-  .hamburger{
-    display: none;
- }
-   .navbar ul{
-     display: block;
- }
+.about-lacey{
+  padding-top: 4em;
+}
 
-/*@media only screen and (max-width: 640px) {
-  .hamburger{
-    display: block;
-  }
-  .menubar ul{
-    display: !none;
-  }*/
+.portfolio-section, a{
+  color: black;
+}
