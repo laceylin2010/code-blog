@@ -17,16 +17,15 @@
   text-align: center;
 }
 
-#aboutme, .employ-background-section{
+#personal-content, .employ-background-section{
   background-color: black;
   color: white;
 }
 
 .personal-section{
   min-height: 23em;
-}
-
-.about-lacey{
+  background-color: black;
+  color: white;
   padding-top: 4em;
 }
 
