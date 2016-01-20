@@ -4,10 +4,8 @@
   aboutController.index = function(){
     $('.nav-content').hide();
     $('#aboutme').show();
-    console.log("Inside aboutController.index()")
+    repos.requestRepos(repoView.index);
   };
-
-  aboutController.index();
 
   module.aboutController = aboutController;
 
