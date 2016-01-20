@@ -1,36 +1,35 @@
-
-li{
-  list-style: none;
-  padding-left: 1em;
-}
-
 body{
-  background-color: #F7FFEF;
   font-family: Architects Daughter, cursive;
+  background-color: white;
+  margin: 0 auto;
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
 img{
   width: 2em;
   max-width:100%;
+  padding: 1em 1em 1em 1em;
+
 }
 
-h1{
-  margin-top: .5em;
+nav{
+  width: 100%;
+  background-color: #00B2AD;
+  z-index: 99999;
+  font-size: x-large;
+  font-weight: 300;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border: solid 3px black;
 }
 
-h2{
-  font-size: 1.5em;
-}
-
-p{
-  line-height: 1em;
-  margin-bottom: 1.5em;
-}
-
-a{
+nav a{
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
   text-decoration: none;
-}
+  color: black;
 
-div{
-  margin-top: 1.5em;
 }
