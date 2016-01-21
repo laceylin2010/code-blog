@@ -3,7 +3,7 @@
 
   aboutController.index = function(){
     $('.nav-content').hide();
-    $('#personal-content').show();
+    $('#my-content').show();
     repos.requestRepos(repoView.index);
   };
 

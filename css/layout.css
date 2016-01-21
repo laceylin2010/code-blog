@@ -22,13 +22,9 @@
   color: white;
 }
 
-.personal-section{
+.aboutme-paragraph{
   min-height: 23em;
   background-color: black;
   color: white;
   padding-top: 4em;
-}
-
-.portfolio-section, a{
-  color: black;
 }
