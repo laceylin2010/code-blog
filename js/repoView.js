@@ -2,7 +2,7 @@
   var repoView = {};
 
   var ui = function(){
-    var $about = $('#my-content');
+    var $about = $('#about-me-descript');
 
     $about.find('ul').empty();
     $about.show().siblings().hide();
@@ -16,7 +16,7 @@
   repoView.index = function(){
     ui();
 
-    $('#my-content ul').append(
+    $('#about-me-descript ul').append(
       repos.with('default_branch').map(render)
     );
   };
