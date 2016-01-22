@@ -31,7 +31,7 @@
       </header>
       <section id='about-me-descript' class='bio resume nav-content' >
         <section class='my-image'>
-        <img src='imgs/lacey.jpg' class='photo-me'>
+          <img src='imgs/lacey.jpg' class='photo-me'>
         </section>
         <section class='personal-section'>
           <h1>About Me</h1>
@@ -42,37 +42,37 @@
         </section>
       </section>
 
-    <section class='portfolio-section'>
-      <script id='about-template' type='text/x-handlebars-template'>
-        <section id='portfolio' class='resume portfolio'>
-          <article class='template' data-category='projects'>
-            <header>
-              <div class='pers-proj'>
-                <p><a href='{{titleUrl}}'>{{title}}</a></p>
-                <p>By: <span class='author-name'> {{author}} </span>
-                Published <time pubdate datePublished='2000-01-01'>{{publishedOn}} </time></p>
-              </div>
-            </header>
-          </article>
-        </section>
-      </script>
-      <div id="projects" class='nav-content'></div>
-    </section>
-
-    <section class='employ-background-section'>
-      <script id='employment-template' type='text/x-handlebars-template'>
-        <section id='employment' class='job-history resume'>
-          <article class='template2' data-category='previous-jobs'>
-            <header>
-              <h2>{{jobTitle}}</h2>
-              <p>{{company}}</p>
-              <p>{{datesWorked}}</p>
-              <p>{{jobDescript}}</p>
-            </header>
-          </article>
-        </section>
+      <section class='portfolio-section'>
+        <script id='about-template' type='text/x-handlebars-template'>
+          <section id='portfolio' class='resume portfolio'>
+            <article class='template' data-category='projects'>
+              <header>
+                <div class='pers-proj'>
+                  <p><a href='{{titleUrl}}'>{{title}}</a></p>
+                  <p>By: <span class='author-name'> {{author}} </span>
+                  Published <time pubdate datePublished='2000-01-01'>{{publishedOn}} </time></p>
+                </div>
+              </header>
+            </article>
+          </section>
+        </script>
+        <div id="projects" class='nav-content'></div>
       </section>
-      </script>
+
+      <section class='employ-background-section'>
+        <script id='employment-template' type='text/x-handlebars-template'>
+          <section id='employment' class='job-history resume'>
+            <article class='template2' data-category='previous-jobs'>
+              <header>
+                <h2>{{jobTitle}}</h2>
+                <p>{{company}}</p>
+                <p>{{datesWorked}}</p>
+                <p>{{jobDescript}}</p>
+              </header>
+            </article>
+          </section>
+        </script>
+      </section>
       <div id="work-history" class='nav-content'></div>
 
 

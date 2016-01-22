@@ -5,7 +5,7 @@
     var $about = $('#about-me-descript');
 
     $about.find('ul').empty();
-    $about.show().siblings().hide();
+    $about.show().siblings().not('.navbar').hide();
   };
 
   var render = function(repo){
