@@ -6,13 +6,6 @@ body{
   font-weight: 400;
 }
 
-img{
-  width: 2em;
-  max-width:100%;
-  padding: 1em 1em 1em 1em;
-
-}
-
 nav{
   width: 100%;
   background-color: #00B2AD;
@@ -31,5 +24,8 @@ nav a{
   padding-right: 2%;
   text-decoration: none;
   color: black;
+}
 
+h2{
+  font-size: 1.5em;
 }

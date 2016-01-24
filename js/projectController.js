@@ -4,6 +4,8 @@
   projectController.index = function (){
     $('.nav-content').hide();
     $('#projects').show();
+    repos.requestRepos(repoView.index);
+
   };
 
   Project.fetchAll();

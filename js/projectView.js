@@ -6,3 +6,7 @@ projectView.initIndexPage = function(){
     $('#projects').append(a.toHTML());
   });
 };
+// 
+// $(document).ready(function(){
+//   $('.bxslider').bxSlider();
+// });

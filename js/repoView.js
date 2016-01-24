@@ -2,10 +2,10 @@
   var repoView = {};
 
   var ui = function(){
-    var $about = $('#about-me-descript');
+    var $projects = $('#projects');
 
-    $about.find('ul').empty();
-    $about.show().siblings().not('.navbar').hide();
+    $projects.find('ul').empty();
+    $projects.show().siblings().not('.navbar').hide();
   };
 
   var render = function(repo){
@@ -16,7 +16,7 @@
   repoView.index = function(){
     ui();
 
-    $('#about-me-descript ul').append(
+    $('#projects ul').append(
       repos.with('default_branch').map(render)
     );
   };

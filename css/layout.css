@@ -3,6 +3,8 @@
   width: 20em;
   /*border: solid;*/
   border-radius: 20%;
+  margin-top:3em;
+  margin-left: 5em;
 }
 
 .my-image{
@@ -27,4 +29,25 @@
   background-color: black;
   color: white;
   padding-top: 4em;
+  padding-left: 30em;
+  padding-right: 15em;
+}
+
+#projects, #work-history{
+  margin-left:4em;
+  font-
+}
+
+.social-images{
+  width: 2em;
+  max-width:100%;
+  padding: 1em 1em 1em 1em;
+}
+
+.project-images{
+  width: 40em;
+}
+
+.repos{
+  float:right;
 }
