@@ -9,6 +9,7 @@
     console.log('clicked home');
   };
 
+
   module.homeController = homeController;
 
 })(window);
